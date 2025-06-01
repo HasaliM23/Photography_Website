@@ -1,0 +1,94 @@
+body {
+  font-family: 'Libre Baskerville', serif;
+}
+
+.hero-section img {
+  max-height: 600px;
+  object-fit: cover;
+}
+
+/* Navbar height control */
+.navbar {
+  height: 70px;
+  padding: 0 !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+/* Transparent Navbar */
+.transparent-navbar {
+  background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent black */
+  backdrop-filter: blur(5px); /* Optional: adds a blur effect behind the navbar */
+  transition: background-color 0.3s ease;
+  z-index: 999;
+}
+
+
+/* Logo sizing */
+.logo-img {
+  max-height: 150px;
+  width: auto;
+}
+
+/* Navbar links (excluding button) */
+.navbar .nav-link {
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  position: relative;
+  padding: 10px 15px;
+  transition: color 0.3s ease;
+}
+
+/* Underline effect */
+.navbar .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 6px;
+  left: 15px;
+  width: 0%;
+  height: 2px;
+  background-color: #7BDCB5;
+  transition: width 0.3s ease;
+}
+
+/* Hover effect for links */
+.navbar .nav-link:hover::after {
+  width: calc(100% - 30px);
+}
+
+/* Navbar UL styles */
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  display: inline;
+}
+
+.navbar ul li a {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Request Quote button styles */
+.navbar .btn-outline-light {
+  color: #ffff;
+  border: 1px solid #7BDCB5;
+  font-weight: 500;
+  padding: 10px 12px;
+  
+  transition: all 0.3s ease;
+}
+
+/* Button hover (no underline) */
+.navbar .btn-outline-light:hover {
+  background-color: #7BDCB5;
+  color: #000;
+  border-color: #7BDCB5;
+}
